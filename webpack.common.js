@@ -9,7 +9,7 @@ module.exports = {
     app: './src/index.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'docs')
   },
   module:{
@@ -70,7 +70,9 @@ module.exports = {
   },
   plugins:[
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css'
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     })
