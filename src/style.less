@@ -177,6 +177,9 @@ main {
 }
 
 @media (max-width: 768px) {
+  #page {
+    box-shadow: 0 0 0 rgba(0, 0, 0, .4);
+  }
   header {
     padding-top: 20px;
     padding-bottom: 90px;
@@ -192,6 +195,18 @@ main {
         width: 120px;
         height: 120px;
       }
+    }
+  }
+  .job {
+    .company {
+      order: 1;
+    }
+    .position {
+      order: 3;
+      flex-basis: 100%;
+    }
+    .time {
+      order: 2;
     }
   }
 }
