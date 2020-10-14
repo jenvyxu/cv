@@ -1,0 +1,37 @@
+{
+  "id": "2127918",
+  "name": "cv",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "491646",
+      "name": "phone",
+      "font_class": "phone",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "564948",
+      "name": "weixin",
+      "font_class": "weixin",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "1185462",
+      "name": "location",
+      "font_class": "location",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "7685077",
+      "name": "email",
+      "font_class": "email",
+      "unicode": "e6f2",
+      "unicode_decimal": 59122
+    }
+  ]
+}
