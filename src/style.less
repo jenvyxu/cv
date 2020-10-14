@@ -16,18 +16,16 @@ body {
   background: #fff;
   margin-top: 10px;
   margin-bottom: 10px;
-  box-shadow: 8px 8px 4px rgba(0,0,0,.4);
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, .4);
 }
 
 header {
+  position: relative;
   background: #3c3c3c;
   width: 100%;
   text-align: center;
   padding: 60px 0 10px 0;
   color: #fff;
-}
-header {
-  position: relative;
   h1 {
     font-size: 30px;
     font-weight: 500;
@@ -129,14 +127,12 @@ section a {
   .item {
     display: flex;
     align-items: center;
-    margin-bottom: 6px;
     span {
       margin-left: 10px;
       flex-grow: 1;
     }
-    svg {
-      flex-basis: 30px;
-      height: 18px;
+    .iconfont {
+      font-size: 18px;
     }
   }
 } 
@@ -184,13 +180,18 @@ main {
   header {
     padding-top: 20px;
     padding-bottom: 90px;
+    .qr-code {
+      display: none;
+    }
   }
   aside {
     width: 100%;
     padding-top: 0px;
-  }
-  aside .avatar img {
-    width: 100px;
-    height: 100px;
+    .avatar{
+      img {
+        width: 120px;
+        height: 120px;
+      }
+    }
   }
 }
