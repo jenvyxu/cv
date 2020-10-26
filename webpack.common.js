@@ -48,24 +48,28 @@ module.exports = {
       },
       {
         test: /\.html$/i,
-        loader: 'html-loader',
-        options: {
-          attributes: {
-            list: [
-              {
-                tag: 'img',
-                attribute: 'src',
-                type: 'src',
-              },
-              {
-                tag: 'link',
-                attribute: 'href',
-                type: 'src',
-              }
-            ]
+        loader: [
+          {
+          loader: 'html-loader',
+          options: {
+            attributes: {
+              list: [
+                {
+                  tag: 'img',
+                  attribute: 'src',
+                  type: 'src',
+                },
+                {
+                  tag: 'link',
+                  attribute: 'href',
+                  type: 'src',
+                }
+              ]
+            }
           }
-        }
-      }
+        },path.join(__dirname, 'keyword-loader.js'),
+      ],
+     }
     ]
   },
   plugins:[
@@ -74,7 +78,10 @@ module.exports = {
       filename: '[name].[hash].css'
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      options: {
+        interpolate: /{{([\s\S]+?)}}/g,
+      }
     })
   ],
   optimization: {
